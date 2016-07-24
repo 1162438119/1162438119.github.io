@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <link media="all" href="http://i.gtimg.cn/vipstyle/mobile/client/gamecenter/frozenui/css/basic-without-btn.css?bid=2162" rel="stylesheet">
+    <link rel="stylesheet" href="../css/loading-all.css"/>
+    <link rel="stylesheet" href="../css/fight.css"/>
+    <title>战队名片</title>
+</head>
+<body ontouchstart="" class="body-fight">
+    <section class="loading-all">
+        <i class="la-loading">
+            <i class="loading"></i>
+        </i>
+        <div class="loading-text">
+            <div class="step step1 default-show" >
+                <span></span>
+            </div>
+            <div class="step step2 " >
+                <span></span>
+            </div>
+            <div class="step step3">
+                <span></span>
+            </div>
+        </div>
+    </section>
+    <div class="wrapper" >
+        <div id="iSlider-effect-wrapper">
+            <div id="animation-effect" class="iSlider-effect">
+            </div>
+        </div>
+        <div class="ui-dialog">
+            <div class="ui-dialog-cnt">
+                <div class="ui-dialog-bd">
+                    <h4>退出战队</h4>
+                    <div>您确定要退出战队，不和我们一起愉快玩耍了吗？！</div>
+                </div>
+                <div class="ui-dialog-ft">
+                    <button type="button" data-role="button">取消</button>
+                    <button type="button" data-role="button">确定退出</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/zepto.min.js"></script>
+    <script src="../js/loader.min.js"></script>
+    <script src="../js/template.js"></script>
+    <script src="../js/islider.js"></script>
+    <script id="cardTemplate" type="text/html">
+        <div class="card-wrap animate">
+            <div class="card-hd">
+                <div class="card-main">
+                    <div class="card-title">
+                        <h2>{{title}}</h2>
+                        <div class="card-id">ID : 232323</div>
+                        <button class="card-btn">
+                            {{btnText}}
+                        </button>
+                    </div>
+                    <div class="setting {{if memberMenu}}mem-menu{{/if}}"></div>
+                </div>
+                <div class="card-modal">
+                    <p>昵称 : {{nick}}</p>
+                    <span class="r-cont ui-arrowlink {{if reddot}}red-dot{{/if}}">成员 :{{count}}人</span>
+                </div>
+                <div class="card-bg">
+                    <span style="background-image:url({{bg}})"></span>
+                </div>
+            </div>
+            <div class="card-bd">
+                {{each server as value i}}
+                <div class="play-info line-dot">
+                    <span class="field">{{value.field}}</span>
+                    <span class="text">{{value.text}}</span>
+                </div>
+                {{/each}}
+                {{if showBtn}}
+                <div class="ui-btn-wrap">
+                    <button class="ui-btn-lg {{btnClass}}">
+                        立即加入
+                    </button>
+                </div>
+                {{else}}
+                <div class="ui-btn-wrap">
+                    <div class="btn-text">退出战队</div>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth>=500 ? 500 : docEl.clientWidth;
+                        if (!clientWidth) return;
+                        docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+                    };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+        $(function(){
+            loading();
+            var json=[{
+                title:'突击分队',
+                nick:'我是战神',
+                btnText:'战队QQ群',
+                count:17,
+                bg:'../img/fight/bg1.jpg',
+                reddot:false,
+                memberMenu:true,
+                server:[{
+                    field:'在玩区服',
+                    text:'安卓3区－蝶舞任务'
+                },{
+                    field:'人均战力',
+                    text:'90045'
+                },{
+                    field:'人均活力',
+                    text:'9127'
+                }],
+                showBtn:false,
+                btnClass:''
+            },{
+                title:'突击分队2',
+                nick:'我是战神',
+                btnText:'战队QQ群',
+                count:17,
+                bg:'../img/fight/bg2.jpg',
+                server:[{
+                    field:'在玩区服',
+                    text:'安卓3区－蝶舞任务'
+                },{
+                    field:'人均战力',
+                    text:'90045'
+                },{
+                    field:'人均活力',
+                    text:'9127'
+                }],
+                showBtn:true,
+                btnClass:''
+            },{
+                title:'突击分队3',
+                nick:'我是战神',
+                btnText:'战队QQ群',
+                count:17,
+                bg:'../img/fight/bg3.jpg',
+                server:[{
+                    field:'在玩区服',
+                    text:'安卓3区－蝶舞任务'
+                },{
+                    field:'人均战力',
+                    text:'90045'
+                },{
+                    field:'人均活力',
+                    text:'9127'
+                }],
+                showBtn:true,
+                btnClass:''
+            },{
+                title:'突击分队4',
+                nick:'我是战神',
+                btnText:'战队QQ群',
+                count:17,
+                bg:'../img/fight/bg4.jpg',
+                server:[{
+                    field:'在玩区服',
+                    text:'安卓3区－蝶舞任务'
+                },{
+                    field:'人均战力',
+                    text:'90045'
+                },{
+                    field:'人均活力',
+                    text:'9127'
+                }],
+                showBtn:true,
+                btnClass:''
+            },{
+                title:'突击分队5',
+                nick:'我是战神',
+                btnText:'战队QQ群',
+                count:17,
+                bg:'../img/fight/bg5.jpg',
+                server:[{
+                    field:'在玩区服',
+                    text:'安卓3区－蝶舞任务'
+                },{
+                    field:'人均战力',
+                    text:'90045'
+                },{
+                    field:'人均活力',
+                    text:'9127'
+                }],
+                showBtn:true,
+                btnClass:''
+            }];
+
+            var data=[],
+                extend='',
+                res=[],
+                devicePixelRatio=window.devicePixelRatio;
+            json.forEach(function(item){
+                var bg=item['bg'];
+                if(devicePixelRatio>=1.5){
+                    extend='@2x';
+                    var picType=bg.substring(bg.lastIndexOf(".")+1);
+                    var picName=bg.substring(0,bg.lastIndexOf("."));
+                    picName+=extend;
+                    bg=item['bg']=picName+'.'+picType;
+                }
+                res.push(bg);
+                data.push({'content':template('cardTemplate', item)});
+            })
+
+
+
+            //预加载资源
+            new mo.Loader(res,{
+                loadType : 1,
+                minTime : 300,
+                onLoading : function(count,total){
+                    //console.log('加载中...（'+count/total*100+'%）');
+                },
+                onComplete : function(time){
+                    $('.loading-all').hide();
+
+                }
+            })
+
+            function loading(){
+                var arr=[1,2,3];
+                setInterval(function(){
+                    var random=Math.floor(Math.random()*3);
+                    $('.loading-text .step1').removeClass('default-show');
+                    $('.step'+arr[random]).addClass('show').siblings().removeClass('show');
+                },5000);
+            }
+
+
+            var islider1 = new iSlider({
+//                initIndex:1,//默认展示第N张
+                data: data,
+                type:'dom',
+                dom: document.getElementById("animation-effect"),
+                duration: 2000,
+                animateType: 'depth',
+                isAutoplay: false,
+                isLooping: true
+            });
+            islider1.addDot();
+        })
+
+    </script>
+</body>
+</html>
