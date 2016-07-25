@@ -2,18 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69416c7b-05c7-4b44-a46e-354235186173" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/basic-without-btn.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/fight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/loading-all.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/b1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/b2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/b3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/b4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/b5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/setting.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/islider.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/loader.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/template.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="1162438119.iws" />
@@ -38,10 +26,11 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2760736">
-              <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.2868098">
+              <caret line="19" column="14" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#li#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#li#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#li#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -216,10 +205,11 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2760736">
-          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.2868098">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#li#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#li#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
