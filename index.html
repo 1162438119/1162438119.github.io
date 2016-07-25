@@ -5,40 +5,45 @@
         <meta name="format-detection" content="telephone=no">
         <title>24go</title>
         <link rel="stylesheet" href="css/frozen.css">
+        <link rel="stylesheet" href="css/swiper.css">
+        <style>
+            .swiper-container {
+                width: 100%;
+                height: auto;
+            }
+        </style>
     </head>
     <body ontouchstart="">
 
-        <div class="ui-slider">
-            <div class="ui-slider-content" style="width: 100%">
-                <li class="current"><span style="background-image: url(images/1.png)"></span></li>
-                <li><span style="background-image: url(images/2.png)"></span></li>
-                <li><span style="background-image: url(images/3.png)"></span></li>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/1.png" width="100%">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/2.png" width="100%">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/3.png" width="100%">
             </div>
         </div>
-        <div class="ui-whitespace">
-            <h1>dsdsadsad</h1>
-        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
         <script src="js/zepto.min.js"></script>
+        <script src="js/swiper.jquery.min.js"></script>
         <script src="js/frozen.js"></script>
 
         <script>
             (function(){
-
-                var slider = new fz.Scroll('.ui-slider', {
-                    role: 'slider',
-                    indicator: true,
-                    autoplay: true,
-                    interval: 3000
+                var swiper = new Swiper('.swiper-container', {
+                    pagination: '.swiper-pagination',
+                    slidesPerView: 1,
+                    paginationClickable: true,
+                    spaceBetween: 30,
+                    loop: true,
+                    autoHeight: true
                 });
-
-                slider.on('beforeScrollStart', function(from, to) {
-                    console.log(from, to);
-                });
-
-                slider.on('scrollEnd', function(cruPage) {
-                    console.log(curPage);
-                });
-
             })();
         </script>
     </body>

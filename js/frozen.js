@@ -307,7 +307,6 @@
 }(window.Zepto)
 	
 
-
 ;(function ($) {
 
 var rAF = window.requestAnimationFrame	||
@@ -1523,5 +1522,6 @@ if (typeof define === "function") {
 	}
 	$.fn.tips=$.tips= Plugin;
 }(window.Zepto)
+
 	
 
