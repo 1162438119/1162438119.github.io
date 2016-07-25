@@ -1,0 +1,12 @@
+.swiper-container {
+    width: 100%;
+    height: auto;
+}
+
+.ui-row-flex {
+    background-color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
